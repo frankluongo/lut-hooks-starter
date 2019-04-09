@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Toggle from './utils/Toggle';
 import { formSubmit } from './utils/Forms';
+import { useTitleInput } from './utils/useTitleInput';
 
 const Application = () => {
-  const [ name, setName ] = useState('');
-
-  useEffect(() => {
-    document.title = name;
-  });
+  const [ name, setName ] = useTitleInput('');
 
   return (
     <div className="main-wrapper">
