@@ -80,3 +80,33 @@ import React, { useRef } from 'react';
 const ref = useRef();
 <main className="main-wrapper" ref={ref}>
 ```
+
+## Context With Hooks
+UserContext.js
+```jsx
+import { createContext } from 'react';
+const UserContext = createContext();
+export default UserContext;
+```
+
+Application.js
+```jsx
+<UserContext.Provider
+  value={{
+    user: false
+  }}
+>
+  ...
+</UserContext.Provider>
+```
+
+Toggle.js
+```jsx
+import React, { useState, useContext } from "react";
+import UserContext from '../contexts/UserContext';
+
+const Toggle = (props) => {
+  const { user } = useContext(UserContext);
+  if (!user) return null;
+}
+```
