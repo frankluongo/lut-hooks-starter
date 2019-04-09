@@ -47,3 +47,13 @@ export const formSubmit = (value, setValue) => {
 ...
 </form>
 ```
+
+## useEffect
+`useEffect` is similar to the life cycle methods in classes. It runs every time the DOM is updated by React
+```jsx
+import React, { useState, useEffect } from 'react';
+
+useEffect(() => {
+  document.title = name;
+});
+```
