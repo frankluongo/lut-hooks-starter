@@ -71,5 +71,12 @@ export function useTitleInput(initialValue) {
 
   return [value, setValue];
 }
+```
 
+## Use Refs with useRef
+Refs allow you to reference elements in the DOM and change them
+```jsx
+import React, { useRef } from 'react';
+const ref = useRef();
+<main className="main-wrapper" ref={ref}>
 ```
