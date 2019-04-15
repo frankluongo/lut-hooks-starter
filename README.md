@@ -153,3 +153,12 @@ const Counter = () => {
 
 export default Counter;
 ```
+
+
+## useMemo For Expensive Functions
+Will keep functions from running on re-render
+```jsx
+import React, { useMemo } from 'react';
+const title = 'Level Up Dishes';
+const titleReversed = useMemo(() => reverseWord(title), [title]);
+```
