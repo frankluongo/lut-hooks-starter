@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useDebugValue } from 'react';
 
 export function useTitleInput(initialValue) {
   const [value, setValue] = useState('');
@@ -6,6 +6,8 @@ export function useTitleInput(initialValue) {
   useEffect(() => {
     document.title = value;
   })
+
+  useDebugValue(value);
 
   return [value, setValue];
 }

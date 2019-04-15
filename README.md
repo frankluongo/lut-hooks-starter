@@ -162,3 +162,21 @@ import React, { useMemo } from 'react';
 const title = 'Level Up Dishes';
 const titleReversed = useMemo(() => reverseWord(title), [title]);
 ```
+
+## useDebugValue For Custom Hook Libraries
+This is a way to provide debugging information for custom hooks that you create
+```jsx
+import { useState, useEffect, useDebugValue } from 'react';
+
+export function useTitleInput(initialValue) {
+  const [value, setValue] = useState('');
+
+  useEffect(() => {
+    document.title = value;
+  })
+
+  useDebugValue(value);
+
+  return [value, setValue];
+}
+```
