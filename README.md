@@ -180,3 +180,8 @@ export function useTitleInput(initialValue) {
   return [value, setValue];
 }
 ```
+
+## Fetching Data With useEffect
+[API Source](https://my-json-server.typicode.com/leveluptuts/fakeapi/dishes)
+```jsx
+```
