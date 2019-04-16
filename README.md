@@ -219,3 +219,12 @@ const Dishes = () => {
 
 export default Dishes;
 ```
+
+## Controlling useEffect
+The code below will prevent useEffect from continuously re-running
+```jsx
+  useEffect(() => {
+    fetchDishes();
+  }, []);
+  // Leaving this array blank will run this only once
+```

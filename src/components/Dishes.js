@@ -11,8 +11,9 @@ const Dishes = () => {
   }
 
   useEffect(() => {
-
-  });
+    fetchDishes();
+  }, []);
+  // Leaving this array blank will run this only once
 
   return (
     <>
