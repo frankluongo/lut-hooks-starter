@@ -228,3 +228,6 @@ The code below will prevent useEffect from continuously re-running
   }, []);
   // Leaving this array blank will run this only once
 ```
+
+## Controlling useEffect Part II
+Putting a value in the array you pass as the second argument of `useEffect` will dictate when it updates

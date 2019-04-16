@@ -13,17 +13,16 @@ const Dishes = () => {
   useEffect(() => {
     fetchDishes();
   }, []);
-  // Leaving this array blank will run this only once
 
   return (
     <>
-      {dishes.map(dish =>(
-      <article className="dish-card dish-card--withImage">
+      {dishes.map((dish, index) =>(
+      <article className="dish-card dish-card--withImage" key={index}>
         <h3>{dish.name}</h3>
         <p>{dish.desc}</p>
         <ul>
-          {dish.ingredients.map(ingredient =>  (
-            <li>{ingredient}</li>
+          {dish.ingredients.map((ingredient, index) =>  (
+            <li key={index}>{ingredient}</li>
           ))}
         </ul>
       </article>
