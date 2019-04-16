@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import Toggle from './utils/Toggle';
 import { formSubmit } from './utils/Forms';
 import { useTitleInput } from './utils/useTitleInput';
+import Dishes from './components/Dishes';
 import UserContext from './contexts/UserContext';
 
 const Application = () => {
@@ -21,6 +22,7 @@ const Application = () => {
           <input type="text" onChange={(e) => setName(e.target.value)} value={name}/>
           <input type="submit" value="submit"/>
         </form>
+        <Dishes />
       </main>
     </UserContext.Provider>
   );
