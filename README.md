@@ -231,3 +231,16 @@ The code below will prevent useEffect from continuously re-running
 
 ## Controlling useEffect Part II
 Putting a value in the array you pass as the second argument of `useEffect` will dictate when it updates
+
+## useLayoutEffect To Wait For DOM
+[Use Hooks](https://usehooks.com/)
+The useLayoutEffect runs whenever the DOM changes
+```jsx
+import { useLayoutEffect } from 'react';
+
+export default function useBodyScrollLock() {
+  useLayoutEffect(() => {
+    document.body.style.overflow = 'hidden';
+  })
+}
+```
