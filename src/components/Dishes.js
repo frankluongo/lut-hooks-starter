@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import useAbortableFetch from 'use-abortable-fetch';
+// import useAbortableFetch from 'use-abortable-fetch';
 
-const Dishes = () => {
+/*const Dishes = () => {
   const apiUrl = 'https://my-json-server.typicode.com/leveluptuts/fakeapi/dishes';
   const { data } = useAbortableFetch(apiUrl);
   if (!data) return null;
@@ -23,11 +23,8 @@ const Dishes = () => {
   );
 };
 
-export default Dishes;
+export default Dishes; */
 
-
-/*
-V1
 const Dishes = () => {
   const apiUrl = 'https://my-json-server.typicode.com/leveluptuts/fakeapi/dishes';
   const [dishes, setDishes] = useState([]);
@@ -60,5 +57,3 @@ const Dishes = () => {
 };
 
 export default Dishes;
-
-*/

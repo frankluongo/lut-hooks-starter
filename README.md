@@ -297,3 +297,49 @@ export default function useOnClickOutside (ref, handler) {
 
 
 ## 3rd Party Hooks
+It's pretty easy to grab 3rd party hooks
+
+```jsx
+const Dishes = () => {
+  const apiUrl = 'https://my-json-server.typicode.com/leveluptuts/fakeapi/dishes';
+  const { data } = useAbortableFetch(apiUrl);
+  if (!data) return null;
+
+  return (
+    <>
+      {data.map((dish, index) =>(
+      <article className="dish-card dish-card--withImage" key={index}>
+        <h3>{dish.name}</h3>
+        <p>{dish.desc}</p>
+        <ul>
+          {dish.ingredients.map((ingredient, index) =>  (
+            <li key={index}>{ingredient}</li>
+          ))}
+        </ul>
+      </article>
+      ))}
+    </>
+  );
+};
+
+export default Dishes;
+```
+
+## Basic Animation With React Spring
+
+```jsx
+import { useSpring, animated } from 'react-spring';
+
+const Application = () => {
+  const animProps = useSpring({ opacity: 1, from: { opacity: 0 }});
+
+  return (
+    ...
+      <animated.h1
+        style={animProps}>
+        Level Up Dishes
+      </animated.h1>
+    ...
+  )
+};
+```
