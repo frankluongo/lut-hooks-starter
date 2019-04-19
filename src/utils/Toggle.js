@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import UserContext from '../contexts/UserContext';
+import ToggleContext from '../contexts/UserContext';
 
 const Toggle = (props) => {
   const { children } = props;
@@ -11,7 +12,9 @@ const Toggle = (props) => {
   return (
     <div>
       <button onClick={() => { setIsToggled(!isToggled); }}>Toggle</button>
-      {isToggled && children}
+      <ToggleContext.Provider value={{ setIsToggled }}>
+        {isToggled && children}
+      </ToggleContext.Provider>
     </div>
   );
 }
